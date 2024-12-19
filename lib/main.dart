@@ -11,13 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: "Poppins"),
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue[900],
           centerTitle: true,
           title: Text(
             "Hello Flutter",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
         body: Container(
@@ -37,7 +39,10 @@ class MyApp extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Text("Image"),
+                  Image.asset(
+                    "assets/images/flutter.png",
+                    height: 150,
+                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -56,9 +61,8 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     children: [
                       Image.asset(
-                        "assets/images/flutter.png",
-                        width: 200,
-                        height: 200,
+                        "assets/images/stormTrooper.png",
+                        width: 100,
                       ),
                       SizedBox(width: 20),
                       Column(
@@ -67,15 +71,16 @@ class MyApp extends StatelessWidget {
                           Text(
                             "Myint Myat",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
-                            "Software Eng.",
+                            "Software Engineer",
                             style: TextStyle(color: Colors.white),
                           ),
                           Text(
-                            "www.github.com",
+                            "www.github.com/Myatty",
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
