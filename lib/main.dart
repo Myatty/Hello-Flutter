@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 // Custom Widget
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,7 +55,11 @@ class MyApp extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     children: [
-                      Text("Image"),
+                      Image.asset(
+                        "assets/images/flutter.png",
+                        width: 200,
+                        height: 200,
+                      ),
                       SizedBox(width: 20),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,11 +71,11 @@ class MyApp extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "Software Engineer",
+                            "Software Eng.",
                             style: TextStyle(color: Colors.white),
                           ),
                           Text(
-                            "www.github.com/Myatty",
+                            "www.github.com",
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
