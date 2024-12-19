@@ -9,7 +9,8 @@ class ChildFooter extends StatelessWidget {
         padding: EdgeInsets.all(20),
         width: double.infinity,
         decoration: BoxDecoration(
-            color: Colors.black, borderRadius: BorderRadius.circular(20)),
+            color: Colors.blueGrey[900],
+            borderRadius: BorderRadius.circular(20)),
         child: Row(
           children: [
             Image.asset(
