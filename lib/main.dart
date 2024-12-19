@@ -29,14 +29,20 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Welcome to Hello Flutter App"),
+              Text(
+                "Welcome to Hello Flutter App",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
               Column(
                 children: [
                   Text("Image"),
                   SizedBox(
                     height: 20,
                   ),
-                  Text("This app is developed by Myint Myat"),
+                  Text(
+                    "This app is developed by Myint Myat",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
               Container(
@@ -45,7 +51,31 @@ class MyApp extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(20)),
-                  child: Text("Text 3"))
+                  child: Row(
+                    children: [
+                      Text("Image"),
+                      SizedBox(width: 20),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Myint Myat",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Software Engineer",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            "www.github.com/Myatty",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      )
+                    ],
+                  ))
             ],
           ),
         ),
